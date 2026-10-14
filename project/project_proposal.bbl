@@ -1,0 +1,112 @@
+\begin{thebibliography}{10}
+
+\bibitem{sn_stream_independance}
+Armin Alaghi and John~P. Hayes.
+\newblock Exploiting correlation in stochastic circuit design.
+\newblock In {\em 2013 IEEE 31st International Conference on Computer Design
+  (ICCD)}, pages 39--46, 2013.
+
+\bibitem{survey_of_stochastic_computing}
+Armin Alaghi and John~P. Hayes.
+\newblock Survey of stochastic computing.
+\newblock {\em ACM Trans. Embed. Comput. Syst.}, 12(2s), May 2013.
+
+\bibitem{low_discrepancy}
+Armin Alaghi and John~P. Hayes.
+\newblock Fast and accurate computation using stochastic circuits.
+\newblock In {\em Proceedings of the Design, Automation and Test in Europe
+  Conference (DATE)}, 2014.
+
+\bibitem{imageprocessing}
+Armin Alaghi, Cheng Li, and John~P. Hayes.
+\newblock Stochastic circuits for real-time image-processing applications.
+\newblock In {\em Proceedings of the 50th Annual Design Automation Conference
+  (DAC)}, pages 136:1--136:6, Austin, TX, USA, 2013.
+
+\bibitem{LFSR_seeding}
+Jason~H. Anderson, Yuko Hara-Azumi, and Shigeru Yamashita.
+\newblock Effect of lfsr seeding, scrambling and feedback polynomial on
+  stochastic computing accuracy.
+\newblock In {\em 2016 Design, Automation \& Test in Europe Conference \&
+  Exhibition (DATE)}, pages 1550--1555, March 2016.
+
+\bibitem{biomedical}
+Timothy~J. Baker and John~P. Hayes.
+\newblock {CeMux}: Maximizing the accuracy of stochastic mux adders and an
+  application to filter design.
+\newblock {\em ACM Transactions on Design Automation of Electronic Systems},
+  27:1--26, 2022.
+
+\bibitem{audiofiltering}
+Timothy~J. Baker, Yiqiu Sun, and John~P. Hayes.
+\newblock Benefits of stochastic computing in hearing aid filterbank design.
+\newblock In {\em Proceedings of the IEEE Biomedical Circuits and Systems
+  Conference (BioCAS)}, pages 1--5, 2021.
+
+\bibitem{nna}
+Bradley~D. Brown and Howard~C. Card.
+\newblock Stochastic neural computation {I}: Computational elements.
+\newblock {\em IEEE Transactions on Computers}, 50(9):891--905, 2001.
+
+\bibitem{chua1971memristor}
+L.~Chua.
+\newblock Memristor---the missing circuit element.
+\newblock {\em IEEE Transactions on Circuit Theory}, 18(5):507--519, 1971.
+
+\bibitem{sng_cost_reram}
+Jo{\~a}o Paulo~C. de~Lima et~al.
+\newblock All-in-memory stochastic computing using {ReRAM}.
+\newblock In {\em Proceedings of the 62nd ACM/IEEE Design Automation Conference
+  (DAC)}, pages 50--56, 2025.
+\newblock arXiv:2504.08340.
+
+\bibitem{gaba2013stochastic}
+Siddharth Gaba, Patrick Sheridan, Jiantao Zhou, Shinhyun Choi, and Wei Lu.
+\newblock Stochastic memristive devices for computing and neuromorphic
+  applications.
+\newblock {\em Nanoscale}, 5(13):5872--5878, 2013.
+
+\bibitem{stochastic_computing}
+B.~R. Gaines.
+\newblock Stochastic computing.
+\newblock In {\em Proceedings of the April 18-20, 1967, Spring Joint Computer
+  Conference}, AFIPS '67 (Spring), page 149–156, New York, NY, USA, 1967.
+  Association for Computing Machinery.
+
+\bibitem{stochastic_computing_systems}
+Brian Gaines.
+\newblock Stochastic computing systems.
+\newblock {\em Adv Inf Syst Sci}, 2, 01 1969.
+
+\bibitem{scrimp}
+Saransh Gupta, Mohsen Imani, Joonseop Sim, Andrew Huang, Fan Wu, M.~Hassan
+  Najafi, and Tajana Rosing.
+\newblock {SCRIMP}: A general stochastic computing architecture using {ReRAM}
+  in-memory processing.
+\newblock In {\em Proceedings of the Design, Automation and Test in Europe
+  Conference (DATE)}, 2020.
+
+\bibitem{firfilters}
+Yin Liu and Keshab~K. Parhi.
+\newblock Lattice {FIR} digital filter architectures using stochastic
+  computing.
+\newblock In {\em Proceedings of the IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}, pages 1027--1031, 2015.
+
+\bibitem{manohar2015}
+Rajit Manohar.
+\newblock Comparing stochastic and deterministic computing.
+\newblock {\em IEEE Computer Architecture Letters}, 14(2):119--122, 2015.
+
+\bibitem{memristor_stochasticity}
+Rawan Naous, Maruan Al-Shedivat, and Khaled~Nabil Salama.
+\newblock Stochasticity modeling in memristors.
+\newblock {\em IEEE Transactions on Nanotechnology}, 15(1):15--28, 2016.
+
+\bibitem{Strukov2008}
+Dmitri~B. Strukov, Gregory~S. Snider, Duncan~R. Stewart, and R.~Stanley
+  Williams.
+\newblock The missing memristor found.
+\newblock {\em Nature}, 453(7191):80–83, May 2008.
+
+\end{thebibliography}

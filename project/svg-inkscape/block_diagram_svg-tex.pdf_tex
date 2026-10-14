@@ -1,0 +1,127 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7d9e, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'block_diagram_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{375bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.956)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{block_diagram_svg-tex.pdf}}%
+    \put(0.15,0.912){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Host PC\end{tabular}}}}%
+    \put(0.15,0.882){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(Python)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{block_diagram_svg-tex.pdf}}%
+    \put(0.168,0.846){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}UART link\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{block_diagram_svg-tex.pdf}}%
+    \put(0.976,0.85){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}\textbf{FPGA}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{block_diagram_svg-tex.pdf}}%
+    \put(0.15,0.756){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}UART\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{block_diagram_svg-tex.pdf}}%
+    \put(0.628,0.772){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Control FSM \& config registers\end{tabular}}}}%
+    \put(0.628,0.74){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}codes · seeds · L\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{block_diagram_svg-tex.pdf}}%
+    \put(0.088,0.658){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{SNG A}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{block_diagram_svg-tex.pdf}}%
+    \put(0.184,0.616){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}LUT A\end{tabular}}}}%
+    \put(0.184,0.586){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2048 × 16\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{block_diagram_svg-tex.pdf}}%
+    \put(0.36,0.6){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{T}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{block_diagram_svg-tex.pdf}}%
+    \put(0.164,0.522){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}LFSR A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{block_diagram_svg-tex.pdf}}%
+    \put(0.3,0.522){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{π}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{block_diagram_svg-tex.pdf}}%
+    \put(0.384,0.54){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{R}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{block_diagram_svg-tex.pdf}}%
+    \put(0.49,0.56){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{R ≤ T}\end{tabular}}}}%
+    \put(0.592,0.58){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{a}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{block_diagram_svg-tex.pdf}}%
+    \put(0.088,0.434){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{SNG B}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{block_diagram_svg-tex.pdf}}%
+    \put(0.184,0.392){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}LUT B\end{tabular}}}}%
+    \put(0.184,0.362){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2048 × 16\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{block_diagram_svg-tex.pdf}}%
+    \put(0.36,0.376){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{T}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{block_diagram_svg-tex.pdf}}%
+    \put(0.164,0.298){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}LFSR B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{block_diagram_svg-tex.pdf}}%
+    \put(0.3,0.298){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{π}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{block_diagram_svg-tex.pdf}}%
+    \put(0.384,0.316){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{R}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{block_diagram_svg-tex.pdf}}%
+    \put(0.49,0.336){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{R ≤ T}\end{tabular}}}}%
+    \put(0.592,0.356){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{b}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{block_diagram_svg-tex.pdf}}%
+    \put(0.088,0.21){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{SNG S (select)}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{block_diagram_svg-tex.pdf}}%
+    \put(0.184,0.168){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}LUT S\end{tabular}}}}%
+    \put(0.184,0.138){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2048 × 16\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{block_diagram_svg-tex.pdf}}%
+    \put(0.36,0.152){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{T}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{block_diagram_svg-tex.pdf}}%
+    \put(0.164,0.074){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}LFSR S\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{block_diagram_svg-tex.pdf}}%
+    \put(0.3,0.074){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{π}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{block_diagram_svg-tex.pdf}}%
+    \put(0.384,0.092){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{R}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{block_diagram_svg-tex.pdf}}%
+    \put(0.49,0.112){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{R ≤ T}\end{tabular}}}}%
+    \put(0.592,0.132){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{s}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{block_diagram_svg-tex.pdf}}%
+    \put(0.814,0.502){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{a·b}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{block_diagram_svg-tex.pdf}}%
+    \put(0.806,0.286){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{(a+b)/2}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{block_diagram_svg-tex.pdf}}%
+    \put(0.918,0.376){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Ones\end{tabular}}}}%
+    \put(0.918,0.344){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}counters\end{tabular}}}}%
+    \put(0.918,0.312){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(×5)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{block_diagram_svg-tex.pdf}}%
+    \put(0.906,0.656){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}counts\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
