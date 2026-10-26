@@ -1,14 +1,13 @@
 # Fdb version 4
-["bibtex project_proposal"] 1792018671.94166 "project_proposal.aux" "project_proposal.bbl" "project_proposal" 1792018672.85506 0
-  "./citations.bib" 1792012461.38781 9415 cee02f14c474d237627816585cb10c46 ""
+["bibtex project_proposal"] 1792026130.90441 "project_proposal.aux" "project_proposal.bbl" "project_proposal" 1792026131.77843 0
+  "./citations.bib" 1792026091.72333 9670 87a8841f61edaf9d29679b53e23994ed ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "project_proposal.aux" 1792018672.77998 3835 c9e0287323382e072045b17a8baab62a "pdflatex"
+  "project_proposal.aux" 1792026131.70999 3993 9ff22bd6ec933600efc9a3c42ee9624e "pdflatex"
   (generated)
   "project_proposal.bbl"
   "project_proposal.blg"
   (rewritten before read)
-["pdflatex"] 1792018671.95498 "/home/tanner/psu/ece351/project/project_proposal.tex" "project_proposal.pdf" "project_proposal" 1792018672.85527 0
-  "/home/tanner/psu/ece351/project/project_proposal.tex" 1792018671.00202 23160 6307014319d0ecac70f46a5f5e9931de ""
+["pdflatex"] 1792026130.92662 "project_proposal.tex" "project_proposal.pdf" "project_proposal" 1792026131.77853 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -60,9 +59,6 @@
   "/usr/share/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf" 1136768653 1948 7330aeef3af211edff3b35fb2c12a0fd ""
   "/usr/share/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf" 1136768653 1384 a9d8adaf491ce34e5fba99dc7bbe5f39 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
-  "/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty" 1576016007 8622 63834878edeb14dd71d58d8f22bc3e06 ""
-  "/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty" 1576625273 7734 b98cbb34c81f667027c1e3ebdbfce34b ""
-  "/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/share/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty" 1575499628 8356 7bbb2c2373aa810be568c29e333da8ed ""
   "/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty" 1701727651 17865 1a9bd36b4f98178fa551aca822290953 ""
@@ -93,7 +89,6 @@
   "/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx" 1667332637 2885 9c645d672ae17285bba324998918efd8 ""
   "/usr/share/texmf-dist/tex/latex/graphics/trig.sty" 1717359999 4023 2c9f39712cf7b43d3eb93a8bbd5c8f67 ""
   "/usr/share/texmf-dist/tex/latex/ieeetran/IEEEtran.cls" 1440712899 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "/usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty" 1507930826 3910 e04f6a6d983bdbdb024917b7ccc80262 ""
   "/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty" 1729800159 100966 88ffa900fd38336daf0681d35d342ea9 ""
   "/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty" 1729800159 11185 08107e8d26d093ccd4c424c2b74809f6 ""
   "/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty" 1729800159 3328 17a5a2d4f4e9d388803c10ac9fffe9d3 ""
@@ -180,9 +175,9 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1791574962 1917523 14ed394f6c29ca337e420b3f1bf2c77b ""
   "block_diagram.png" 1792013559.60003 442252 351f37855771b564b1551fc44d8ab2be ""
   "fsm_diagram.png" 1792015169.53731 115883 282fefbe01d5e5da8ad1b41b9b244860 ""
-  "project_proposal.aux" 1792018672.77998 3835 c9e0287323382e072045b17a8baab62a "pdflatex"
-  "project_proposal.bbl" 1792018671.94998 4276 19c237a4ab49b52a9f12b7dd25ec316c "bibtex project_proposal"
-  "project_proposal.tex" 1792018671.00202 23160 6307014319d0ecac70f46a5f5e9931de ""
+  "project_proposal.aux" 1792026131.70999 3993 9ff22bd6ec933600efc9a3c42ee9624e "pdflatex"
+  "project_proposal.bbl" 1792026130.92356 4438 8dbf18f77ffb4ebf5ca3b1fc51cfc401 "bibtex project_proposal"
+  "project_proposal.tex" 1792026120.12999 23470 b9ae6e987b565a8cb2ee168d3114ffcb ""
   (generated)
   "project_proposal.aux"
   "project_proposal.log"

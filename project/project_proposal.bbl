@@ -53,6 +53,11 @@ L.~Chua.
 \newblock Memristor---the missing circuit element.
 \newblock {\em IEEE Transactions on Circuit Theory}, 18(5):507--519, 1971.
 
+\bibitem{chua1976memristive}
+L.~O. Chua and S.~M. Kang.
+\newblock Memristive devices and systems.
+\newblock {\em Proceedings of the IEEE}, 64(2):209--223, 1976.
+
 \bibitem{sng_cost_reram}
 Jo{\~a}o Paulo~C. de~Lima et~al.
 \newblock All-in-memory stochastic computing using {ReRAM}.

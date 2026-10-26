@@ -16,8 +16,8 @@
 \setuptodonotes{inline}
 \begin{document}
 
-\title{A memristor based stochastic number generator for low cost arithmatic \\
-{\footnotesize \textsuperscript{}with image processing case study}
+\title{A memristor-based stochastic number generator for low-cost arithmetic \\
+{\footnotesize \textsuperscript{}with an image processing case study}
 }
 
 \author{\IEEEauthorblockN{Tanner Robison}
@@ -43,79 +43,79 @@ rencadua@pdx.edu}
 
 \begin{abstract}
     Edge computing devices face substantial area, power, and reliability constraints,
-    though most of their workloads like image processing or neural network inferancing
-    tolerate small computational errors, making them suitable for stochastic 
+    though most of their workloads, like image processing or neural network inferencing,
+    tolerate small computational errors, making them suitable for stochastic
     computing (SC). SC encodes values as the probability of a 1 appearing in a random
-    bit stream. aritmatic with this is simplified to single gates, with multiplication
-    being done with an and gate, and scaled addition with a
-    multiplexer. individual bit errors have only a minor effect on the result.
+    bitstream. Arithmetic with this is simplified to single gates, with multiplication
+    being done with an AND gate, and scaled addition with a
+    multiplexer. Individual bit errors have only a minor effect on the result.
     The stochastic number generators (SNGs) that produce the random bitstreams usually
     dominate the cost of these systems, reducing the validity of the advantages. 
     This paper proposes using a behavioral SNG model using the memristor stochastic
-    switching model proposed by Naous et al with which
-    pseudorandom values are compared with the voltage dependent switching probability.
+    switching model proposed by Naous et al., in which
+    pseudorandom values are compared with the voltage-dependent switching probability.
     This presents the applied voltage as a control knob for setting the stochastic value.
     We will pair the SNG with a multiplier and scaled adder and evaluate the circuit
-    in 2 ways. The encoding accuracy for the voltage to probability mapping. 
-    The arithmatic error as a function of bitstream length.
-    An additional stretch goal of the project will be to implement the unit into
+    in 2 ways: the encoding accuracy of the voltage-to-probability mapping and
+    the arithmetic error as a function of bitstream length.
+    An additional stretch goal of the project will be to implement the unit in
     an image processing case study to reveal the effects of progressive precision
-    and graceful degredation.
+    and graceful degradation.
 
 \end{abstract}
 
 \begin{IEEEkeywords}
-stochastic, memristors, arithmatic, image processing, SystemVerilog, FPGA
+stochastic, memristors, arithmetic, image processing, SystemVerilog, FPGA
 \end{IEEEkeywords}
 
 \section{Introduction}
-Current edge computing devices like IoT, wearables, or biomedical implants rely
-more and more on local processing for stronger real time capabilities, But face
+Current edge computing devices, like IoT, wearables, or biomedical implants, rely
+more and more on local processing for stronger real-time capabilities but face
 limited area, power, and reliability constraints. Many of the workloads these devices work
-with are error tolerant like image processing, neural network inferancing, or 
-signal filtering meaning they accept small numerical errors without changing the result.
-conventional binary arithmatic wastes area and power computing exact results that 
-these workloads dont need while facing larger consequences to incorrect bit errors.
-Stochastic computing presents as a useful computing paradigm for these types of workloads
-by way of simplified arithmatic gate construction. Arithmatic like multiplication, and
-addition can be done with singular gates. The circuitry needed to generate stochastic
-streams is the current hangup with the paradigm, and usually dominates the cost of these
-systems offsetting the advantages of the simpler arithmatic.
+with are error tolerant, like image processing, neural network inferencing, or
+signal filtering, meaning they accept small numerical errors without changing the result.
+Conventional binary arithmetic wastes area and power computing exact results that
+these workloads don't need, while facing larger consequences from bit errors.
+Stochastic computing presents itself as a useful computing paradigm for these types of workloads
+by way of simplified arithmetic gate construction. Arithmetic like multiplication and
+addition can be done with single gates. The circuitry needed to generate stochastic
+streams is the current hang-up with the paradigm and usually dominates the cost of these
+systems, offsetting the advantages of the simpler arithmetic.
 
 Memristors are non-volatile devices whose resistances depend on an internal state variable.
-The changing of this resistance is know as the switching characteristic and is
-inherintly probabilistic. Naous et al \cite{memristor_stochasticity} modeled this
-behavior as a voltage dependent switching probability. This maps a voltage to a 
+The changing of this resistance is known as the switching characteristic and is
+inherently probabilistic. Naous et al.~\cite{memristor_stochasticity} modeled this
+behavior as a voltage-dependent switching probability. This maps a voltage to a 
 probability, which presents the voltage as a natural control knob for setting a 
 stochastic value.
 
-This paper proposes using this voltage dependent switching probability to create a
-behavioral Stochastic Number Generator (SNG) model implemented on an FPGA. 
+This paper proposes using this voltage-dependent switching probability to create a
+behavioral Stochastic Number Generator (SNG) model implemented on an FPGA.
 The model will work by comparing pseudorandom
-values with the $P_{switch}(V)$ equation allowing for the applied voltage control knob.
-The SNG will be paired with a scaled adder and multiplier to perform arithmatic on
-these streams and the device will be evaluated in 2 ways: The encoding accuracy for the
-voltage to probability mapping, and the arithmatic error as a function of the bit
-stream length.
+values with the $P_{switch}(V)$ equation, allowing for the applied voltage control knob.
+The SNG will be paired with a scaled adder and multiplier to perform arithmetic on
+these streams, and the device will be evaluated in 2 ways: the encoding accuracy of the
+voltage-to-probability mapping and the arithmetic error as a function of the
+bitstream length.
 
 \section{Background}
 \subsection{Stochastic Computing}
-stochastic computing (SC) is a hardware level paradigm of probabilistic computing.
-Numerical values are encoded with the probability of a 1 appearing in a random bitstream
+Stochastic computing (SC) is a hardware-level paradigm of probabilistic computing.
+Numerical values are encoded as the probability of a 1 appearing in a random bitstream
 \cite{stochastic_computing},
-and the bits position in the stream does not matter. This is what makes SC suitable
-for error tolerant workloads, a wrong bit in binary has exponential consequences as the
-bit works up to the most significant bit position. Because a bits position in the
-stream does not matter this consequence does not exist.
-This allows for complex arithmatic 
-to be executed with simpler logic gates over conventional binary operations. 
-For example, to multiply two stochastic bit streams together is just one gate, 
-for unipolar numbers[0,1] this an \textbf{and} gate, and 
-for bipolar numbers[-1,1] this is an \textbf{XNOR} gate \cite{stochastic_computing_systems}. 
+and a bit's position in the stream does not matter. This is what makes SC suitable
+for error-tolerant workloads: a wrong bit in binary has exponential consequences as the
+bit works up to the most significant bit position. Because a bit's position in the
+stream does not matter, this consequence does not exist.
+This allows for complex arithmetic
+to be executed with simpler logic gates than conventional binary operations.
+For example, multiplying two stochastic bitstreams takes just one gate:
+for unipolar numbers [0,1], this is an \textbf{AND} gate, and
+for bipolar numbers [-1,1], this is an \textbf{XNOR} gate \cite{stochastic_computing_systems}.
 To do the same operation in positional binary would require many gates.
-Addition is done with a 2:1 multiplexer, and requires a 3rd stochastic stream. The
+Addition is done with a 2:1 multiplexer and requires a 3rd stochastic stream. The
 select for the MUX must be supplied with the new stream strictly with a value of 0.5
-\cite{stochastic_computing_systems}. Given input streams A and B the output is 1 
+\cite{stochastic_computing_systems}. Given input streams A and B, the output is 1
 with probability \cite{stochastic_computing_systems}
 \begin{equation}
     0.5\,p_A + 0.5\,p_B = (p_A + p_B)/2
@@ -123,22 +123,22 @@ with probability \cite{stochastic_computing_systems}
 
 The result is scaled by $1/2$ because a probability can't exceed 1, so the sum of
 2 values must be mapped back into that range. The MUX circuit can perform scaled addition
-for both unipolor and bipolar numbers. This requires multiplying $2 * Number of addition operations$
-after converting back to binary to get the true value.
+for both unipolar and bipolar numbers. Because each MUX stage halves the result, a value that passes through $k$ cascaded
+additions must be multiplied by $2^k$ after converting back to binary to get the true value.
 
-To convert back to binary requires a counter that counts the number of 1's over L cycles.
-where L is the bit stream length.
-The Trade off comes with time, because to get N bits of precision from
-a bitstream requires $2^N$ clock cycles or more once you account for things like correlation
+Converting back to binary requires a counter that counts the number of 1s over L cycles,
+where L is the bitstream length.
+The trade-off comes with time, because getting N bits of precision from
+a bitstream requires $2^N$ clock cycles, or more once you account for things like correlation
 and noise. This results in latency growing exponentially as precision grows, where
-8 bit precision requires 256 cycles, but 16 bit requires 65,536. Low gate count
+8-bit precision requires 256 cycles, but 16-bit requires 65,536. Low gate count
 does not necessarily mean low energy per result, because energy is the product of
-power and computation time, energy per result also scales exponentially with time.
-With these considerations Stochastic computing is mainly suited for highly parallel,
-error tolerant, and low precision workloads. \cite{manohar2015}
-Some example applications where this is useful are in neural network accelerators\cite{nna},
-FIR filters\cite{firfilters}, biomedical signal processing\cite{biomedical}, 
-image processing\cite{imageprocessing}, audio filtering\cite{audiofiltering}, etc....
+power and computation time; energy per result also scales exponentially with precision.
+With these considerations, stochastic computing is mainly suited for highly parallel,
+error-tolerant, and low-precision workloads~\cite{manohar2015}.
+Some example applications where this is useful are neural network accelerators~\cite{nna},
+FIR filters~\cite{firfilters}, biomedical signal processing~\cite{biomedical},
+image processing~\cite{imageprocessing}, audio filtering~\cite{audiofiltering}, etc.
 
 \subsection{Correlation}
 
@@ -208,14 +208,15 @@ memristors.
 
 \subsection{Memristors}
 
-A memristive device is a circuit element who's electrical behavior depends on an 
+A memristive device is a circuit element whose electrical behavior depends on an 
 internal state that is influenced by its previous electrical excitation. The 
 memristor was originally proposed in theory by Chua in 1971 \cite{chua1971memristor}
-as a relationship between charge and magnetic flux. It was later generalized to 
-memristive systems where the device resistance can depend on one or more internal 
-state variables with the strukov et al paper \cite{Strukov2008}.
+as a relationship between charge and magnetic flux. It was later generalized by Chua and Kang~\cite{chua1976memristive} to
+memristive systems, in which the device resistance can depend on one or more internal
+state variables. In 2008, Strukov et al.~\cite{Strukov2008} identified a physical
+device exhibiting this behavior.
 
-A voltage controlled memristive system can generally be represented as
+A voltage-controlled memristive system can generally be represented as
 \begin{equation}
     i(t) = G(x,v,t)v(t)
 \end{equation}
@@ -224,16 +225,16 @@ A voltage controlled memristive system can generally be represented as
     \frac{dx}{dt} = f(x,v,t)
 \end{equation}
 
-where x represents the internal device state, G is the state dependant conductance, 
-and f describes how the state changes in response to an applied voltage. 
-The state dependance distinguishes the system from an ordinary resistor where
+where x represents the internal device state, G is the state-dependent conductance,
+and f describes how the state changes in response to an applied voltage.
+The state dependence distinguishes the system from an ordinary resistor, where
 \begin{equation}
     i(t)=\frac{v(t)}{R}
 \end{equation}
 
-In a memristor an applied voltage can alter the device state, changing the conductance. 
-This can be good because it means we can program the resistance at any time, 
-but also means the electrical operation (voltage pulse) used to evaluate a 
+In a memristor, an applied voltage can alter the device state, changing the conductance.
+This can be good because it means we can program the resistance at any time,
+but it also means the electrical operation (voltage pulse) used to evaluate a 
 computational result can disturb the value stored by the device.
 
 Memristor switching is also random. Apply the same voltage pulse many times,
@@ -299,7 +300,7 @@ counts over UART to a Python host script. The host computes each SNG's
 encoding accuracy by comparing its measured fraction of 1s with
 $P_{switch}(V_k)$, and the arithmetic error by comparing the AND and MUX
 outputs with the exact product and scaled sum. 
-Operand codes are chosen from each device's own LUT, so the measured error 
+Voltage codes are chosen from each device's own LUT, so the measured error 
 reflects the stochastic computation rather than device variation.
 
 A control finite-state machine (FSM) coordinates each run in five states.
@@ -322,14 +323,15 @@ voltage codes at one bitstream length takes about 5~s.
     The returned thresholds are latched and compared with
     independent LFSRs to produce stochastic streams, which drive the AND
     multiplier and MUX adder. Ones are counted over $L$ cycles and reported
-    to the host over UART.}
+    to the host over UART. The Pi blocks represent the LFSRs' bit shuffles, and the T
+    blocks represent the LUTs' results.}
   \label{fig:block}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{fsm_diagram.png}
-    \caption{Block diagram of the FSM controller, Each run receives a 14-byte configuration packet,
+    \caption{Block diagram of the FSM controller. Each run receives a 14-byte configuration packet,
     loads thresholds and seeds, runs the SNGs for $L$ cycles, and returns
     the five counts. An incomplete packet times out back to IDLE.}
     \label{fig:fsm}
@@ -344,25 +346,26 @@ returned count becomes the output pixel. Scaled addition blends two images,
 and multiplication applies a mask or brightness scale. At 115,200~baud, a
 $128\times128$ image takes on the order of ten seconds per pass, which is
 acceptable for an offline study. Repeating each operation at increasing $L$
-demonstrates progressive precision, with output quality measured by Peak Signal
-to Noise Ratio (PSNR)
+demonstrates progressive precision, with output quality measured by Peak Signal-to-Noise
+Ratio (PSNR)
 against a floating-point reference.
 
 \newpage
 \section{Timeline}
 \begin{itemize}
-  \item \textbf{Week 1:} Python switching model, LUT generation, start on  LFSR 
+  \item \textbf{Week 4:} Python switching model, LUT generation, start on  LFSR 
       and SNG RTL.
-  \item \textbf{Week 2:} complete week 1 work, control FSM, and UART RTL;
+  \item \textbf{Week 5:} Complete week 4 work, control FSM, and UART RTL;
         verify in simulation against the Python model.
-  \item \textbf{Week 3:} Synthesize for the Basys~3; complete host script
+  \item \textbf{Week 6:} Synthesize for the Basys~3; complete host script
         and test it against a Python emulation of the FPGA. Begin board
-        bring-up if hardware delivered
-  \item \textbf{Week 4:} Board bring-up, confirm hardware counts match
-        simulation run encoding-accuracy and arithmetic-error sweeps.
-  \item \textbf{Week 5:} Analysis and figures image case study if on
+        bring-up if hardware is delivered.
+  \item \textbf{Week 7:} Board bring-up; confirm hardware counts match
+        simulation; run encoding-accuracy and arithmetic-error sweeps.
+  \item \textbf{Week 8:} Analysis and figures; image case study if on
         schedule.
-  \item \textbf{Week 6:} Final report.
+    \item \textbf{Week 9:} Cleanup \& polishing.
+    \item \textbf{Week 10:} Final Report.
 \end{itemize}
 
 \section{Conclusion}
@@ -391,15 +394,15 @@ study will demonstrate progressive precision, with output quality improving
 as bitstream length increases.
 
 \section*{Acknowledgment}
-"The authors declare that generative AI was used for proofreading and editing 
-assistance in the preparation of this manuscript. Figures 1 and  2 uses an AI generated
-illlustration. some AI-generated content was included in the proposed design \& Methodology
+The authors declare that generative AI was used for proofreading and editing 
+assistance in the preparation of this manuscript. Figures 1 and 2 use AI-generated
+illustrations. Some AI-generated content was included in the Proposed Design \& Methodology
 section to aid in more detailed project planning and content comprehension.
 
 \appendix
-\textbf{witching Model Variables}
- 
-Equation 6 \& 7:
+\textbf{Switching Model Variables}
+
+Equation~\eqref{eq:pswitch}:
 \[
   P_{switch}(V) = 1 - e^{-\Delta t/\tau(V)}, \qquad \tau(V) = \tau_0\, e^{-V/V_0}
 \]
@@ -418,7 +421,7 @@ $e$ -- Euler's number, 2.718.
 PSNR measures how close an output image is to a reference image. Higher
 values mean a closer match.
 \[
-  \mathrm{PSNR} = 10\log_{10}\!\left(\frac{MAX^2}{MSE}\right), \qquad
+  \mathrm{PSNR} = 10\log_{10}\!\left(\frac{MAX^2}{MSE}\right)
 \]
 
 \[

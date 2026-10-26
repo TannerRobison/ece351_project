@@ -1,7 +1,7 @@
 PWD /home/tanner/psu/ece351/project
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/tanner/psu/ece351/project/project_proposal.tex
+INPUT project_proposal.tex
 OUTPUT project_proposal.log
 INPUT /usr/share/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 INPUT /usr/share/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -115,17 +115,6 @@ INPUT /usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 INPUT /usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/shellesc.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/shellesc.sty
-INPUT /usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-INPUT /usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-INPUT /usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
-INPUT /usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
-INPUT /usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-INPUT /usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-INPUT /usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT ./project_proposal.w18
-INPUT ./project_proposal.w18
-INPUT project_proposal.w18
 INPUT /usr/share/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/share/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/share/texmf-dist/tex/latex/transparent/transparent-nometadata.sty

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2026.10.9)  14 OCT 2026 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2026.10.9)  14 OCT 2026 18:02
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/tanner/psu/ece351/project/project_proposal.tex
-(/home/tanner/psu/ece351/project/project_proposal.tex
+**project_proposal.tex
+(./project_proposal.tex
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
 (/usr/share/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -301,30 +301,13 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-)
-(/usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
-
-(/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
-Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-
-(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-))
-(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-runsystem(uname -s > "project_proposal.w18")...executed.
-
- (./project_proposal.w18)
-runsystem(rm -- "project_proposal.w18")...executed.
-
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 \c@svg@param@lastpage=\count293
 \svg@box=\box56
 \c@svg@param@currpage=\count294
-) (/usr/share/texmf-dist/tex/latex/transparent/transparent.sty
+)
+(/usr/share/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2022-10-27 v1.5 Transparency with color stacks
 
 (/usr/share/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
@@ -698,12 +681,12 @@ Underfull \vbox (badness 1152) has occurred while \output is active []
 
 [2]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-80.
+81.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
-80.
+81.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
@@ -712,7 +695,7 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 <block_diagram.png, id=21, 4215.75pt x 4030.05624pt>
 File: block_diagram.png Graphic file (type png)
 <use block_diagram.png>
-Package pdftex.def Info: block_diagram.png  used on input line 319.
+Package pdftex.def Info: block_diagram.png  used on input line 320.
 (pdftex.def)             Requested size: 252.0pt x 240.87054pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -720,7 +703,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fsm_diagram.png, id=22, 4215.75pt x 854.19125pt>
 File: fsm_diagram.png Graphic file (type png)
 <use fsm_diagram.png>
-Package pdftex.def Info: fsm_diagram.png  used on input line 331.
+Package pdftex.def Info: fsm_diagram.png  used on input line 333.
 (pdftex.def)             Requested size: 252.0pt x 51.05376pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -756,13 +739,13 @@ L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16170 strings out of 475322
- 323975 string characters out of 5771094
- 719009 words of memory out of 5000000
- 38686 multiletter control sequences out of 15000+600000
+ 16041 strings out of 475322
+ 321125 string characters out of 5771094
+ 717444 words of memory out of 5000000
+ 38575 multiletter control sequences out of 15000+600000
  595793 words of font info for 110 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 95i,9n,101p,519b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 95i,9n,101p,578b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -775,7 +758,7 @@ ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project_proposal.pdf (5 pages, 719158 bytes).
+Output written on project_proposal.pdf (5 pages, 718810 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream

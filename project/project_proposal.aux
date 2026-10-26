@@ -24,6 +24,7 @@
 \citation{sng_cost_reram}
 \citation{scrimp}
 \citation{chua1971memristor}
+\citation{chua1976memristive}
 \citation{Strukov2008}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Correlation}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Stochastic Number Generators}{2}{}\protected@file@percent }
@@ -38,9 +39,9 @@
 \newlabel{eq:pswitch}{{6}{3}{}{equation.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Image Processing Case Study}{3}{}\protected@file@percent }
 \citation{memristor_stochasticity}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Datapath. Each SNG's voltage code indexes that SNG's own $P_{switch}$ LUT, generated from perturbed device parameters. The returned thresholds are latched and compared with independent LFSRs to produce stochastic streams, which drive the AND multiplier and MUX adder. Ones are counted over $L$ cycles and reported to the host over UART.}}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Datapath. Each SNG's voltage code indexes that SNG's own $P_{switch}$ LUT, generated from perturbed device parameters. The returned thresholds are latched and compared with independent LFSRs to produce stochastic streams, which drive the AND multiplier and MUX adder. Ones are counted over $L$ cycles and reported to the host over UART. The Pi blocks represent the LFSRs' bit shuffles, and the T blocks represent the LUTs' results.}}{4}{}\protected@file@percent }
 \newlabel{fig:block}{{1}{4}{}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Block diagram of the FSM controller, Each run receives a 14-byte configuration packet, loads thresholds and seeds, runs the SNGs for $L$ cycles, and returns the five counts. An incomplete packet times out back to IDLE.}}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Block diagram of the FSM controller. Each run receives a 14-byte configuration packet, loads thresholds and seeds, runs the SNGs for $L$ cycles, and returns the five counts. An incomplete packet times out back to IDLE.}}{4}{}\protected@file@percent }
 \newlabel{fig:fsm}{{2}{4}{}{figure.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Timeline}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{4}{}\protected@file@percent }
@@ -56,15 +57,16 @@
 \bibcite{audiofiltering}{7}
 \bibcite{nna}{8}
 \bibcite{chua1971memristor}{9}
-\bibcite{sng_cost_reram}{10}
-\bibcite{gaba2013stochastic}{11}
-\bibcite{stochastic_computing}{12}
-\bibcite{stochastic_computing_systems}{13}
-\bibcite{scrimp}{14}
-\bibcite{firfilters}{15}
-\bibcite{manohar2015}{16}
-\bibcite{memristor_stochasticity}{17}
-\bibcite{Strukov2008}{18}
+\bibcite{chua1976memristive}{10}
+\bibcite{sng_cost_reram}{11}
+\bibcite{gaba2013stochastic}{12}
+\bibcite{stochastic_computing}{13}
+\bibcite{stochastic_computing_systems}{14}
+\bibcite{scrimp}{15}
+\bibcite{firfilters}{16}
+\bibcite{manohar2015}{17}
+\bibcite{memristor_stochasticity}{18}
+\bibcite{Strukov2008}{19}
 \@writefile{toc}{\contentsline {section}{References}{5}{}\protected@file@percent }
 \gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{1}}
 \gdef \@abspage@last{5}
