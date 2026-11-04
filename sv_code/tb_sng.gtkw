@@ -1,0 +1,60 @@
+[*]
+[*] GTKWave view for tb_sng. Open with:
+[*]   gtkwave tb_sng.fst sv_code/tb_sng.gtkw
+[*]
+[*] Opens at the start of test 2 (code closest to p = 0.5, L = 1024).
+[*] Test 1 (full-period counts) is at 0 - 4587 us; search test_id to jump.
+[timestart] 4587600000
+[size] 1600 900
+*-18.000000 0
+@200
+-Control
+@28
+tb_sng.clk
+tb_sng.rst
+tb_sng.load
+tb_sng.en
+@24
+tb_sng.test_id
+@200
+-SNG A
+@24
+tb_sng.dut_a.code[10:0]
+tb_sng.dut_a.seed[15:0]
+tb_sng.dut_a.threshold[15:0]
+@22
+tb_sng.dut_a.u_lfsr.state[15:0]
+@24
+tb_sng.dut_a.r[15:0]
+@8024
+tb_sng.dut_a.r[15:0]
+@20000
+-
+-
+-
+@28
+tb_sng.dut_a.stoch_bit
+@200
+-SNG B
+@24
+tb_sng.dut_b.code[10:0]
+tb_sng.dut_b.threshold[15:0]
+tb_sng.dut_b.r[15:0]
+@28
+tb_sng.dut_b.stoch_bit
+@200
+-SNG S (select)
+@24
+tb_sng.dut_s.code[10:0]
+tb_sng.dut_s.threshold[15:0]
+tb_sng.dut_s.r[15:0]
+@28
+tb_sng.dut_s.stoch_bit
+@200
+-Counts (update at end of each run)
+@24
+tb_sng.ones.ones[0]
+tb_sng.ones.ones[1]
+tb_sng.ones.ones[2]
+[pattern_trace] 1
+[pattern_trace] 0
