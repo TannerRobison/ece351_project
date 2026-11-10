@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
-| Date             : Mon Nov  9 16:52:00 2026
+| Date             : Mon Nov  9 17:33:17 2026
 | Host             : caplab06 running 64-bit major release  (build 9200)
 | Command          : report_power -file nexys4ddr_top_power_routed.rpt -pb nexys4ddr_top_power_summary_routed.pb -rpx nexys4ddr_top_power_routed.rpx
 | Design           : nexys4ddr_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.134        |
+| Total On-Chip Power (W)  | 0.121        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.037        |
+| Dynamic (W)              | 0.024        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.4         |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      292 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       66 |     63400 |            0.10 |
-|   CARRY4       |    <0.001 |       26 |     15850 |            0.16 |
-|   Register     |    <0.001 |      156 |    126800 |            0.12 |
-|   F7/F8 Muxes  |    <0.001 |        2 |     63400 |           <0.01 |
-|   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |    <0.001 |      261 |       --- |             --- |
-| Block RAM      |    <0.001 |        1 |       135 |            0.74 |
-| I/O            |     0.034 |       49 |       210 |           23.33 |
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |     0.004 |     1620 |       --- |             --- |
+|   LUT as Logic |     0.004 |      811 |     63400 |            1.28 |
+|   F7/F8 Muxes  |    <0.001 |      249 |     63400 |            0.39 |
+|   CARRY4       |    <0.001 |       62 |     15850 |            0.39 |
+|   Register     |    <0.001 |      395 |    126800 |            0.31 |
+|   Others       |     0.000 |       15 |       --- |             --- |
+| Signals        |     0.004 |     1070 |       --- |             --- |
+| DSPs           |     0.002 |        3 |       240 |            1.25 |
+| I/O            |     0.011 |       53 |       210 |           25.24 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.134 |          |           |                 |
+| Total          |     0.121 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.003 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.014 |       0.010 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.028 |       0.013 |      0.015 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -142,9 +142,11 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| nexys4ddr_top |     0.037 |
-|   u_sng       |     0.001 |
-|     u_lut     |     0.001 |
+| nexys4ddr_top |     0.024 |
+|   u_sng_a     |     0.003 |
+|     u_lut     |     0.003 |
+|   u_sng_b     |     0.003 |
+|     u_lut     |     0.002 |
 +---------------+-----------+
 
 
