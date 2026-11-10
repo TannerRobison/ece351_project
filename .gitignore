@@ -1,0 +1,21 @@
+# ---- Vivado generated files ----
+# Rewritten on every open/build, so tracking them causes merge conflicts.
+# The project file (vivavado/vivavado.xpr) and all sources stay tracked.
+# The released bitstream is copied by hand into bitstream/.
+vivavado/vivavado.cache/
+vivavado/vivavado.runs/
+vivavado/vivavado.hw/
+vivavado/vivavado.ip_user_files/
+vivavado/vivavado.sim/
+vivavado/vivavado.gen/
+vivavado/vivavado.srcs/utils_1/
+.Xil/
+vivado*.jou
+vivado*.log
+vivado*.str
+webtalk*
+
+# ---- Simulation output ----
+obj_dir/
+*.fst
+*.vcd
