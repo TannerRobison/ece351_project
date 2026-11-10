@@ -10,8 +10,10 @@ create_clock -name sys_clk -period 10.000 -waveform {0 5} [get_ports CLK100MHZ]
 ## ---- Reset button (active low) ----
 set_property -dict { PACKAGE_PIN C12 IOSTANDARD LVCMOS33 } [get_ports CPU_RESETN]
 
-## ---- Center button: load ----
+## ---- Buttons: load A (left), load B (right), load both (center) ----
 set_property -dict { PACKAGE_PIN N17 IOSTANDARD LVCMOS33 } [get_ports BTNC]
+set_property -dict { PACKAGE_PIN P17 IOSTANDARD LVCMOS33 } [get_ports BTNL]
+set_property -dict { PACKAGE_PIN M17 IOSTANDARD LVCMOS33 } [get_ports BTNR]
 
 ## ---- Switches ----
 set_property -dict { PACKAGE_PIN J15 IOSTANDARD LVCMOS33 } [get_ports {SW[0]}]
@@ -31,7 +33,7 @@ set_property -dict { PACKAGE_PIN U12 IOSTANDARD LVCMOS33 } [get_ports {SW[13]}]
 set_property -dict { PACKAGE_PIN U11 IOSTANDARD LVCMOS33 } [get_ports {SW[14]}]
 set_property -dict { PACKAGE_PIN V10 IOSTANDARD LVCMOS33 } [get_ports {SW[15]}]
 
-## ---- LEDs: threshold T ----
+## ---- LEDs: live stream bits on LED[4:0] ----
 set_property -dict { PACKAGE_PIN H17 IOSTANDARD LVCMOS33 } [get_ports {LED[0]}]
 set_property -dict { PACKAGE_PIN K15 IOSTANDARD LVCMOS33 } [get_ports {LED[1]}]
 set_property -dict { PACKAGE_PIN J13 IOSTANDARD LVCMOS33 } [get_ports {LED[2]}]
@@ -49,12 +51,9 @@ set_property -dict { PACKAGE_PIN V14 IOSTANDARD LVCMOS33 } [get_ports {LED[13]}]
 set_property -dict { PACKAGE_PIN V12 IOSTANDARD LVCMOS33 } [get_ports {LED[14]}]
 set_property -dict { PACKAGE_PIN V11 IOSTANDARD LVCMOS33 } [get_ports {LED[15]}]
 
-## ---- RGB LED16, red channel: stochastic bit ----
-set_property -dict { PACKAGE_PIN N15 IOSTANDARD LVCMOS33 } [get_ports LED16_R]
-
 ## ---- Asynchronous inputs ----
 ## Buttons and switches go through 2-FF synchronizers; no input timing.
-set_false_path -from [get_ports {CPU_RESETN BTNC SW[*]}]
+set_false_path -from [get_ports {CPU_RESETN BTNC BTNL BTNR SW[*]}]
 
 ## ---- Configuration ----
 set_property CFGBVS VCCO [current_design]
