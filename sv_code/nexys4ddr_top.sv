@@ -17,6 +17,13 @@
 //   LED16_R    stochastic stream bit. In slow mode it blinks on with
 //              probability T / 65535 per tick; in fast mode it toggles far too
 //              fast to see, so its brightness tracks T / 65535 instead.
+//   7-segment  left 4 digits: T in hex (same value as LED[15:0]).
+//              right 4 digits: number of 1s the SNG produced, in hex.
+//                fast mode: 1s in the last complete window of 65,535 stream
+//                  bits. That is one full LFSR period, so every R value is
+//                  seen once and the count should equal T exactly.
+//                slow mode: running count since the last load, so it ticks
+//                  up with each blink of LED16_R.
 //
 // The seed is a fixed parameter: 16 switches are not enough for an 11-bit
 // code and a 16-bit seed. Holding BTNC reloads the same seed every cycle, so
@@ -40,7 +47,10 @@ module nexys4ddr_top #(
     input  logic        BTNC,
     input  logic [15:0] SW,
     output logic [15:0] LED,
-    output logic        LED16_R
+    output logic        LED16_R,
+    output logic [6:0]  SEG,         // CA..CG, active low
+    output logic        DP,          // active low
+    output logic [7:0]  AN           // active low, AN[0] = rightmost digit
 );
 
     logic clk;
@@ -114,6 +124,35 @@ module nexys4ddr_top #(
         .stoch_bit(stoch_bit)
     );
 
+    // ---- Ones counter ----
+    //
+    // Counts the stream bits the SNG produces (cycles with en high) and how
+    // many of them are 1. A load restarts the count, since it changes T and
+    // reseeds the LFSR. After WINDOW bits the ones count is saved in
+    // ones_window and both counters restart.
+    localparam int WINDOW = 65_535;  // one full LFSR period
+
+    logic [15:0] bit_cnt;      // stream bits so far in this window
+    logic [15:0] ones_cnt;     // 1s so far in this window
+    logic [15:0] ones_window;  // 1s in the last complete window
+
+    always_ff @(posedge clk) begin
+        if (rst || load) begin
+            bit_cnt     <= '0;
+            ones_cnt    <= '0;
+            ones_window <= '0;
+        end else if (en) begin
+            if (bit_cnt == 16'(WINDOW - 1)) begin
+                ones_window <= ones_cnt + 16'(stoch_bit);
+                bit_cnt     <= '0;
+                ones_cnt    <= '0;
+            end else begin
+                bit_cnt  <= bit_cnt + 1'b1;
+                ones_cnt <= ones_cnt + 16'(stoch_bit);
+            end
+        end
+    end
+
     // ---- Outputs ----
     //
     // stoch_bit is combinational, so register it before it leaves the chip.
@@ -121,5 +160,15 @@ module nexys4ddr_top #(
         LED16_R <= stoch_bit;
 
     assign LED = threshold;
+
+    // Decimal point on digit 4 separates T from the count.
+    seven_seg u_seg (
+        .clk  (clk),
+        .value({threshold, fast ? ones_window : ones_cnt}),
+        .dp_on(8'b0001_0000),
+        .seg  (SEG),
+        .dp   (DP),
+        .an   (AN)
+    );
 
 endmodule
